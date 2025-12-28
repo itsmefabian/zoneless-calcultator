@@ -9,16 +9,15 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'app-calculator-button',
-  standalone: true,
-  imports: [],
-  templateUrl: './calculator-button.html',
-  styleUrls: ['./calculator-button.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  host: {
-    class: 'w-1/4 border-r border-b border-indigo-400',
-    '[class.w-2/4]': 'isDoubleSize()',
-  },
+    selector: 'app-calculator-button',
+    imports: [],
+    templateUrl: './calculator-button.html',
+    styleUrls: ['./calculator-button.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    host: {
+        class: 'w-1/4 border-r border-b border-indigo-400',
+        '[class.w-2/4]': 'isDoubleSize()',
+    }
 })
 export class CalculatorButton {
   isCommand = input<boolean, boolean | string>(false, {

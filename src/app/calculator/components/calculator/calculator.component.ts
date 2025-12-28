@@ -9,14 +9,13 @@ import { CalculatorButton } from '../calculator-button/calculator-button';
 import { Calculator } from '@/calculator/services/calculator';
 
 @Component({
-  selector: 'calculator',
-  standalone: true,
-  imports: [CalculatorButton],
-  templateUrl: './calculator.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  host: {
-    '(document:keyup)': 'handleKeyboardEvent($event)',
-  },
+    selector: 'calculator',
+    imports: [CalculatorButton],
+    templateUrl: './calculator.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    host: {
+        '(document:keyup)': 'handleKeyboardEvent($event)',
+    }
 })
 export class CalculatorComponent {
   calculatorButtons = viewChildren(CalculatorButton);
